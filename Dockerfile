@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.10-slim-buster
+FROM python:3.10.8-slim-buster
 WORKDIR /server
 COPY requirements.txt /server 
 RUN pip install -r requirements.txt
