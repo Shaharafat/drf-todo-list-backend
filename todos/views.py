@@ -19,3 +19,9 @@ class CreateTodo(generics.CreateAPIView):
 
     class Meta:
         model = Todo
+
+
+class UpdateTodo(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+    lookup_field = "pk"
